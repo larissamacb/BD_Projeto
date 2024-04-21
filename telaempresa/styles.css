@@ -33,18 +33,20 @@ h2 {
 
 section {
     width: 600px;
-    height: 320px;
+    height: 490px;
     background-color: rgb(41, 110, 163);
     border-radius: 10px;
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
     padding: 60px 90px;
+    box-sizing: border-box;
 }
 
 .formulario {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
 }
 
 article {
@@ -61,7 +63,18 @@ input {
     border-radius: 4px;
     outline: none;
     border: none;
-    padding: 4px;
+    padding: 6px;
+    font-size: 16px;
+}
+
+textarea {
+    width: 100%; 
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    padding: 6px;
+    resize: vertical; 
+    font-size: 16px;
 }
 
 
@@ -72,10 +85,6 @@ label {
     margin-right: 20px;
 }
 
-.campos {
-    gap: 14.5px;
-}
-
 img {
     width: 250px;
     margin: 50px 0 5px 0;
@@ -84,7 +93,7 @@ img {
 button {
     display: block; 
     width: 100%; 
-    margin-top: 10px; 
+    margin-top: 13px; 
     padding: 10px; 
     background-color: rgb(22, 90, 143); 
     color: white; 
