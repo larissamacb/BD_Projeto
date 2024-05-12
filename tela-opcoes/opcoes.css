@@ -1,0 +1,32 @@
+section {
+    width: 40%;
+    height: fit-content;
+    background-color: rgb(41, 110, 163);
+    border-radius: 10px;
+    margin: 0 auto 50px auto;
+    padding: 60px 90px;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+    padding: 6px;
+    padding: 10px; 
+    background-color: rgb(22, 90, 143); 
+    color: white; 
+    border: 1px solid white; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+li:hover {
+    background-color: rgb(17, 67, 105);
+    transition: 0.5s;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,53 @@
+section {
+    width: 90%;
+    height: 135px;
+    background-color: rgb(41, 110, 163);
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 22px 90px;
+
+}
+
+input {
+    height: 40px;
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    padding: 6px 10px;
+    font-size: 16px;
+}
+
+.pesquisa-e-filtros {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+}
+
+select {
+    padding: 6px;
+    border-radius: 8px;
+    width: 20%;
+    height: 40px;
+    font-size: 16px;
+}
+
+button {
+    width: 15%;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 6px;
+    border: none;
+    background-color: rgb(22, 90, 143);
+    border: 1px solid white; 
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(17, 67, 105);
+    transition: 0.5s;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alteração</title>
+    <link rel="stylesheet" href="/img/header.css">
+    <link rel="stylesheet" href="/tela-excluir/excluir.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="/tela-opcoes/opcoes.html"><img src="../img/image-removebg-preview.png" alt=""></a>
+        <h2>Secretaria de Obras do DF</h2>
+        <h1>Alteração de Empresas</h1>
+    </header>
+
+    <section>
+        <input type="text" placeholder="Consulte a empresa por pessoa jurídica ou CNPJ">
+        <button>Pesquisar</button>
+    </section>
+
+    <div id="resultados" style="display: none">
+        <table id="tabela-resultados">
+            <thead>
+                <tr>
+                    <th>Pessoa jurídica</th>
+                    <th>CNPJ</th>
+                    <th>E-mail</th>
+                    <th>Capital declarado</th>
+                    <th>Acervo técnico</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <button id="btn-alterar">Alterar</button>
+
+    <script src="alterar.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+section {
+    width: 90%;
+    height: 135px;
+    background-color: rgb(41, 110, 163);
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 22px 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+input {
+    height: 40px;
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    padding: 6px 10px;
+    font-size: 16px;
+}
+
+button {
+    margin-top: 10px;
+    width: 15%;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 6px;
+    background-color: rgb(22, 90, 143);
+    border: 1px solid white; 
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(17, 67, 105);
+    transition: 0.5s;
+}
+
+#btn-excluir {
+    display: none;
+    margin: 15px auto;
+}
+
+#btn-alterar {
+    display: none;
+    margin: 15px auto;
+}

@@ -1,0 +1,76 @@
+section {
+    width: 600px;
+    height: 490px;
+    background-color: rgb(41, 110, 163);
+    border-radius: 10px;
+    margin: 0 auto 50px auto;
+    padding: 60px 90px;
+    box-sizing: border-box;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
+}
+
+article {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+input {
+    flex: 1;
+    height: 30px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    padding: 6px;
+    font-size: 16px;
+}
+
+textarea {
+    width: 100%; 
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    padding: 6px;
+    resize: vertical; 
+    font-size: 16px;
+}
+
+
+label {
+    color: aliceblue;
+    width: 130px; 
+    text-align: right;
+    margin-right: 20px;
+}
+
+img {
+    width: 250px;
+    margin: 50px 0 5px 0;
+}
+
+button {
+    display: block; 
+    width: 100%; 
+    margin-top: 13px; 
+    padding: 10px; 
+    background-color: rgb(22, 90, 143); 
+    color: white; 
+    border: 1px solid white; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 16px;
+    
+}
+button:hover {
+    background-color: rgb(17, 67, 105);
+    transition: 0.5s;
+}
