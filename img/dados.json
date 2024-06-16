@@ -1,0 +1,20 @@
+{
+    "dados": [
+        {
+            "nome": "Larissa",
+            "cnpj": 847150,
+            "nomepj": "Larissa ltda",
+            "email": "larissa@",
+            "capdeclarado": 8214503,
+            "acervotec": "iodphfp"
+        },
+        {
+            "nome": "Samu",
+            "cnpj": 954145,
+            "nomepj": "Samu ltda",
+            "email": "samu@",
+            "capdeclarado": 7192452,
+            "acervotec": "uyODBFOC"
+        }
+    ]
+}
