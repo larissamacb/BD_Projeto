@@ -1,28 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alteração</title>
-    <link rel="stylesheet" href="/img/header.css">
+    <link rel="stylesheet" href="/img/header-aviso.css">
     <link rel="stylesheet" href="/tela-excluir/excluir.css">
+    <link rel="stylesheet" href="alterar.css">
 </head>
 <body>
+    <div id="aviso" class="aviso">
+        <img src="" alt="" class="icone-erro">
+        <span class="mensagem-erro"></span>
+    </div>
+    
+
     <header class="cabecalho">
-        <a href="/tela-opcoes/opcoes.html"><img src="../img/image-removebg-preview.png" alt=""></a>
+        <a href="/tela-opcoes/opcoes.html"><img src="../img/image-removebg-preview.png" alt="" class="logo"></a>
         <h2>Secretaria de Obras do DF</h2>
         <h1>Alteração de Empresas</h1>
     </header>
 
     <section>
-        <input type="text" placeholder="Consulte a empresa por pessoa jurídica ou CNPJ">
-        <button>Pesquisar</button>
+        <input type="text" id="inputConsulta" placeholder="Consulte a empresa por nome, pessoa jurídica ou CNPJ">
+        <button id="btnPesquisar">Pesquisar</button>
     </section>
 
-    <div id="resultados" style="display: none">
+    <div class="botoes">
+        <button id="btnAlterar">Alterar</button>
+        <button id="btnConfirmar" style="display: none;">Confirmar</button>
+        <button id="btnCancelar" style="display: none;">Cancelar</button>
+    </div>
+    
+
+    <div id="resultados" style="display: none;">
         <table id="tabela-resultados">
             <thead>
                 <tr>
+                    <th>Nome</th>
                     <th>Pessoa jurídica</th>
                     <th>CNPJ</th>
                     <th>E-mail</th>
@@ -34,8 +49,7 @@
         </table>
     </div>
 
-    <button id="btn-alterar">Alterar</button>
-
     <script src="alterar.js"></script>
+    <script src="/img/aviso.js"></script>
 </body>
 </html>

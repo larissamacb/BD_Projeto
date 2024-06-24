@@ -5,32 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta</title>
     <link rel="stylesheet" href="consultar.css">
-    <link rel="stylesheet" href="/img/header.css">
+    <link rel="stylesheet" href="/img/header-aviso.css">
 </head>
 <body>
+    <div id="aviso" class="aviso">
+        <img src="" alt="" class="icone-erro">
+        <span class="mensagem-erro"></span>
+    </div>
 
     <header class="cabecalho">
-        <a href="/tela-opcoes/opcoes.html"><img src="../img/image-removebg-preview.png" alt=""></a>
+        <a href="/tela-opcoes/opcoes.html"><img src="../img/image-removebg-preview.png" alt="" class="logo"></a>
         <h2>Secretaria de Obras do DF</h2>
         <h1>Consulta de Empresas</h1>
     </header>
 
     <section>
-        <input type="text" placeholder="Consulte a empresa por pessoa jurídica ou CNPJ">
+        <input type="text" id="input-consulta" placeholder="Consulte a empresa por pessoa jurídica ou CNPJ">
         <div class="pesquisa-e-filtros">
             <select name="" id="filtros">
                 <option value="">Filtros</option>
-                <option value="">Ordem alfabética</option>
-                <option value="">Maior capital declarado</option>
+                <option value="ordem-alfabetica">Ordem alfabética por nome</option>
+                <option value="maior-capital">Maior capital declarado</option>
             </select>
-            <button>Pesquisar</button>
+            <button id="btn-pesquisar">Pesquisar</button>
         </div>
     </section>
 
-    <div id="resultados" style="display: none">
+    <div id="resultados">
         <table id="tabela-resultados">
             <thead>
                 <tr>
+                    <th>Nome</th>
                     <th>Pessoa jurídica</th>
                     <th>CNPJ</th>
                     <th>E-mail</th>
@@ -42,6 +47,7 @@
         </table>
     </div>
     
+    <script src="/img/aviso.js"></script>
     <script src="consultar.js"></script>
 </body>
 </html>

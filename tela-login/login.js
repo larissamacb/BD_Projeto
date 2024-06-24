@@ -4,12 +4,12 @@ btnenviar.addEventListener('click', function(e){
     const usuario = document.querySelector('#usuario').value
     const senha = document.querySelector('#senha').value
 
-    if (usuario === "seuUsuario" && senha === "suaSenha"){
+    if (usuario === "Usuario" && senha === "senha"){
         window.location.href = "/tela-opcoes/opcoes.html"
-        console.log("f")
     } else {
-        alert("Credenciais inválidas. Tente novamente.")
-        console.log("a")
+        aviso('erro', 'Usuário ou senha inválidos')
+        document.querySelector('#usuario').value = '';
+        document.querySelector('#senha').value = '';
     }
     e.preventDefault()
 })

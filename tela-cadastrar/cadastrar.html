@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar</title>
     <link rel="stylesheet" href="cadastrar.css">
-    <link rel="stylesheet" href="/img/header.css">
+    <link rel="stylesheet" href="/img/header-aviso.css">
 </head>
 <body>
+    <div id="aviso" class="aviso">
+        <img src="" alt="" class="icone-erro">
+        <span class="mensagem-erro"></span>
+    </div>
+
     <div class="cabecalho">
-        <a href="/tela-opcoes/opcoes.html"><img src="../img/image-removebg-preview.png" alt=""></a>
+        <a href="/tela-opcoes/opcoes.html"><img src="../img/image-removebg-preview.png" class="logo" alt=""></a>
         <h2>Secretaria de Obras do DF</h2>
         <h1>Cadastro de Empresas</h1>
     </div>
@@ -20,35 +25,48 @@
             <article>
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome">
+                <img src="/img/certinho.png" alt="" class="icone-feedback sucesso">
+                <img src="/img/errado.png" alt="" class="icone-feedback erro">
             </article>
             <article>
                 <label for="cnpj">CNPJ:</label>
-                <input type="text" name="cnpj" id="cnpj">
+                <input type="text" name="cnpj" id="cnpj" maxlength="14">
+                <img src="/img/certinho.png" alt="" class="icone-feedback sucesso">
+                <img src="/img/errado.png" alt="" class="icone-feedback erro">
             </article>
             <article>
                 <label for="nomepj">Pessoa Jurídica:</label>
                 <input type="text" name="nomepj" id="nomepj">
+                <img src="/img/certinho.png" alt="" class="icone-feedback sucesso">
+                <img src="/img/errado.png" alt="" class="icone-feedback erro">
             </article>
             <article>
                 <label for="email">E-mail:</label>
                 <input type="text" name="email" id="email">
+                <img src="/img/certinho.png" alt="" class="icone-feedback sucesso">
+                <img src="/img/errado.png" alt="" class="icone-feedback erro">
             </article>
             <article>
                 <label for="capdeclarado">Capital declarado:</label>
-                <input type="number" name="capdeclarado" id="capdeclarado">
+                <input type="number" name="capdeclarado" id="capdeclarado" min="1000000000">
+                <img src="/img/certinho.png" alt="" class="icone-feedback sucesso">
+                <img src="/img/errado.png" alt="" class="icone-feedback erro">
             </article>
             <article>
                 <label for="acervotec">Acervo Técnico:</label>
                 <textarea name="acervotec" id="acervotec" rows="10"></textarea>
+                <img src="/img/certinho.png" alt="" class="icone-feedback sucesso">
+                <img src="/img/errado.png" alt="" class="icone-feedback erro">
             </article>
         </div>
         
-            <button id="enviar">Enviar</button>
+        <button id="enviar">Enviar</button>
     </form>
     </section>
     <ul>
         
     </ul>
     <script src="cadastrar.js"></script>
+    <script src="/img/aviso.js"></script>
 </body>
 </html>
