@@ -96,3 +96,43 @@ input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+.resultados {
+    margin: 20px auto;
+    width: 90%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead th {
+    background-color: rgb(22, 90, 143);
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#table tbody tr:hover {
+    background-color: #f2f2f28b;
+}
+
+#table tbody tr.selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.ultimas {
+    font-size: 25px;
+}

@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function aplicarFiltros(empresas) {
-        const consulta = inputConsulta.value.toLowerCase().trim();
+        const consulta = inputConsulta.value.trim();
         const filtroSelecionado = selectFiltros.value;
 
         let resultadosFiltrados = empresas;

@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form');
     const inputs = document.querySelectorAll('input, textarea');
-    let cnpjsExistents = []; 
+    let cnpjsExistents = [];
+    let ultimasEmpresas = [];
+
+    const tabelaUltimasEmpresas = document.querySelector('#ultimas-empresas tbody');
 
     function carregarDados() {
         fetch('http://localhost:8080/empresas')
@@ -14,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(dados => {
                 cnpjsExistents = dados.map(empresa => empresa.cnpj);
+                ultimasEmpresas = dados.slice(-5);
+                renderizarUltimasEmpresas();
             })
             .catch(error => {
                 console.error('Erro ao buscar empresas:', error);
@@ -94,12 +99,12 @@ document.addEventListener('DOMContentLoaded', function() {
         let acervotec = document.querySelector('#acervotec').value.trim();
 
         if (!validarCNPJ(cnpj)) {
-            aviso('erro', 'CNPJ inválido. Deve conter exatamente 14 dígitos numéricos.');
+            aviso('erro', 'Campos vazios ou preenchidos incorretamente');
             return;
         }
 
         if (cnpjsExistents.includes(cnpj)) {
-            aviso('erro', 'Este CNPJ já está cadastrado.');
+            aviso('erro', 'Este CNPJ já está cadastrado');
             return;
         }
 
@@ -139,10 +144,33 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             aviso('sucesso', 'Empresa cadastrada')
             console.log('Empresa cadastrada:', data);
+            ultimasEmpresas.push(data);
+            if (ultimasEmpresas.length > 5) {
+                ultimasEmpresas.shift();
+            }
+            renderizarUltimasEmpresas();
         })
         .catch(error => {
             aviso('erro', 'Erro ao cadastrar empresa. Tente novamente')
             console.error('Erro ao cadastrar empresa:', error);
+        });
+    }
+
+    function renderizarUltimasEmpresas() {
+        tabelaUltimasEmpresas.innerHTML = '';
+
+        ultimasEmpresas.forEach(empresa => {
+            const row = document.createElement('tr');
+            const atributos = ['nome', 'nomePJ', 'cnpj', 'email', 'capDec', 'acervo'];
+
+            atributos.forEach(atributo => {
+                const cell = document.createElement('td');
+                const valor = empresa[atributo] !== undefined && empresa[atributo] !== null ? empresa[atributo] : '';
+                cell.textContent = valor;
+                row.appendChild(cell);
+            });
+
+            tabelaUltimasEmpresas.appendChild(row);
         });
     }
 
